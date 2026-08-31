@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samapika &amp; Sashwat's Baby Shower — Sep 19, 2026</title>
+<title>Samapika &amp; Sashwat's Baby Shower (Sep 19, 2026)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -193,6 +193,38 @@
     .details .item + .item{ border-left: none; border-top: 1px solid var(--line); padding-top: 24px; }
   }
 
+  /* ---------- Logistics ---------- */
+
+  .logistics{
+    padding: 40px 28px;
+  }
+
+  .logistics-grid{
+    display: flex;
+    gap: 36px;
+  }
+
+  .litem{
+    flex: 1;
+  }
+
+  .logistics .label{
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+
+  .logistics .ltext{
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 480px){
+    .logistics-grid{ flex-direction: column; gap: 24px; }
+  }
+
   /* ---------- Note ---------- */
 
   .note{
@@ -257,6 +289,10 @@
     margin-top: 16px;
     font-size: 0.9rem;
     color: var(--ink-soft);
+  }
+
+  .rsvp .alt a{
+    color: var(--ink);
   }
 
   /* ---------- Registry ---------- */
@@ -355,19 +391,7 @@
 
     <div class="divider"></div>
 
-    <section class="rsvp">
-      <h2>Let the celebration grow</h2>
-      <p class="by">Kindly RSVP by September 5, 2026</p>
-      <a class="btn" href="https://forms.gle/QBYM7n7M6CK8LXVJA" target="_blank">
-        Send an RSVP
-      </a>
-      <p class="alt">or text Sashwat at  <a href="tel:+18123798689">+1(812)379-8689</a></p>
-      <p class="alt">P.S. — the guest of honor already picked a move-in date and isn't big on RSVPs, so let's not keep them waiting.</p>
-    </section>
-
-    <div class="divider"></div>
-
-     <section class="logistics">
+    <section class="logistics">
       <div class="logistics-grid">
         <div class="litem">
           <p class="label">Parking</p>
@@ -385,6 +409,18 @@
           </p>
         </div>
       </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="rsvp">
+      <h2>Let the celebration grow</h2>
+      <p class="by">Kindly RSVP by September 5, 2026</p>
+      <a class="btn" href="https://forms.gle/QBYM7n7M6CK8LXVJA" target="_blank">
+        Send an RSVP
+      </a>
+      <p class="alt">or text Sashwat at <a href="tel:+18123798689">+1 (812) 379-8689</a></p>
+      <p class="alt">P.S. the guest of honor already picked a move-in date and isn't big on RSVPs, so let's not keep them waiting.</p>
     </section>
 
     <div class="divider"></div>
