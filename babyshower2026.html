@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samapika &amp; Sashwat's Baby Shower — Sep 19, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #dfe6d2;
+    --panel: #faf6ea;
+    --ink: #2f3a28;
+    --ink-soft: #5b6753;
+    --gold: #c2903a;
+    --rose: #c17b7f;
+    --line: #c9d1b8;
+    --max: 640px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Work Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* subtle paper texture on the background via layered radial gradients */
+  body{
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.35), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(255,255,255,0.25), transparent 45%);
+  }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .panel{
+    background: var(--panel);
+    margin: 32px auto;
+    border: 1px solid rgba(47,58,40,0.08);
+    box-shadow: 0 1px 0 rgba(47,58,40,0.04);
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero{
+    text-align: center;
+    padding: 64px 28px 48px;
+  }
+
+  .sprout{
+    width: 92px;
+    height: auto;
+    margin: 0 auto 28px;
+    display: block;
+  }
+
+  .sprout .stem{
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: grow 1.1s ease-out 0.2s forwards;
+  }
+
+  .sprout .leaf{
+    fill: #8fa377;
+    opacity: 0;
+    transform-origin: center;
+    animation: unfurl 0.6s ease-out forwards;
+  }
+  .sprout .leaf-left{ animation-delay: 0.9s; }
+  .sprout .leaf-right{ animation-delay: 1.05s; }
+
+  .sprout .bud{
+    fill: var(--rose);
+    opacity: 0;
+    animation: bloom 0.5s ease-out 1.3s forwards;
+  }
+
+  .sprout .pot{
+    fill: var(--gold);
+    opacity: 0.9;
+  }
+
+  @keyframes grow{ to{ stroke-dashoffset: 0; } }
+  @keyframes unfurl{
+    from{ opacity: 0; transform: scale(0.4); }
+    to{ opacity: 1; transform: scale(1); }
+  }
+  @keyframes bloom{
+    from{ opacity: 0; transform: scale(0.2); }
+    to{ opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .sprout .stem, .sprout .leaf, .sprout .bud{
+      animation: none !important;
+      opacity: 1 !important;
+      stroke-dashoffset: 0 !important;
+    }
+  }
+
+  h1{
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: clamp(2.1rem, 5.5vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+
+  .hero p{
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    margin: 0 auto;
+    max-width: 40ch;
+  }
+
+  .hero .names{
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* ---------- Divider ---------- */
+
+  .divider{
+    height: 1px;
+    background: var(--line);
+    margin: 0 28px;
+  }
+
+  /* ---------- Details row ---------- */
+
+  .details{
+    display: flex;
+    padding: 40px 28px;
+    text-align: center;
+  }
+
+  .details .item{
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  .details .item + .item{
+    border-left: 1px solid var(--line);
+  }
+
+  .details .label{
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+
+  .details .value{
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin: 0;
+  }
+
+  .details .value small{
+    display: block;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  @media (max-width: 480px){
+    .details{ flex-direction: column; gap: 24px; }
+    .details .item + .item{ border-left: none; border-top: 1px solid var(--line); padding-top: 24px; }
+  }
+
+  /* ---------- Note ---------- */
+
+  .note{
+    padding: 40px 28px 44px;
+    text-align: center;
+  }
+
+  .note p{
+    max-width: 46ch;
+    margin: 0 auto;
+    color: var(--ink-soft);
+  }
+
+  .note .signoff{
+    margin-top: 16px;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  /* ---------- RSVP ---------- */
+
+  .rsvp{
+    padding: 44px 28px 48px;
+    text-align: center;
+  }
+
+  .rsvp h2{
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+  }
+
+  .rsvp .by{
+    color: var(--ink-soft);
+    margin: 0 0 26px;
+    font-size: 0.95rem;
+  }
+
+  .btn{
+    display: inline-block;
+    background: var(--gold);
+    color: var(--panel);
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.98rem;
+    padding: 14px 34px;
+    border-radius: 999px;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+
+  .btn:hover{ background: #ad7e2f; }
+  .btn:focus-visible{
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+  .btn:active{ transform: scale(0.98); }
+
+  .rsvp .alt{
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Registry ---------- */
+
+  .registry{
+    padding: 40px 28px 48px;
+    text-align: center;
+  }
+
+  .registry p{
+    color: var(--ink-soft);
+    max-width: 42ch;
+    margin: 0 auto 20px;
+  }
+
+  .link-line{
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rose);
+    padding-bottom: 2px;
+    font-weight: 500;
+  }
+  .link-line:focus-visible{
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer{
+    text-align: center;
+    padding: 40px 28px 56px;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  footer .host{
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="panel">
+
+    <section class="hero">
+      <svg class="sprout" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path class="pot" d="M32 96 L68 96 L62 118 L38 118 Z"></path>
+        <path class="stem" d="M50 96 C50 70 50 55 50 30"></path>
+        <path class="leaf leaf-left" d="M50 60 C34 58 26 46 30 34 C44 38 50 48 50 60 Z"></path>
+        <path class="leaf leaf-right" d="M50 46 C66 44 74 32 70 20 C56 24 50 34 50 46 Z"></path>
+        <circle class="bud" cx="50" cy="26" r="7"></circle>
+      </svg>
+
+      <h1>Our little sprout is on the way</h1>
+      <p>
+        Please join us for an afternoon of good food and warm wishes
+        as our family's roots grow by one.
+        <span class="names">Samapika &amp; Sashwat</span>
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="details">
+      <div class="item">
+        <p class="label">Date</p>
+        <p class="value">Sep 19<small>Saturday, 2026</small></p>
+      </div>
+      <div class="item">
+        <p class="label">Time</p>
+        <p class="value">11:00 AM<small>Until 3:00 PM</small></p>
+      </div>
+      <div class="item">
+        <p class="label">Place</p>
+        <p class="value">1605 Mission Springs Cir<small>San Jose, CA 95131</small></p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="note">
+      <p>
+        We're about to be outnumbered, and we couldn't be more excited.
+        Come water this little seedling with love (and maybe a nap-time
+        survival tip or two) before it officially puts down roots this fall.
+      </p>
+      <p class="signoff">With love, Samapika &amp; Sashwat</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="rsvp">
+      <h2>Let the celebration grow</h2>
+      <p class="by">Kindly RSVP by September 5, 2026</p>
+      <a class="btn" href="mailto:you@example.com?subject=RSVP%20for%20Samapika%20%26%20Sashwat's%20Baby%20Shower&body=I'd%20love%20to%20join!%20Here%20are%20my%20details%3A%0A%0AName%3A%0AGuests%3A%0ADietary%20notes%3A">
+        Send an RSVP
+      </a>
+      <p class="alt">or text Sashwat at +1 (812) 379-8689</p>
+      <p class="alt">P.S. — the guest of honor already picked a move-in date and isn't big on RSVPs, so let's not keep them waiting.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="registry">
+      <p>
+        No gifts are necessary — your company is the only thing on our
+        wish list. If you'd still like to help this nursery bloom, a few
+        favorites are here.
+      </p>
+      <a class="link-line" href="#" target="_blank" rel="noopener">View the registry</a>
+    </section>
+
+  </div>
+
+  <footer>
+    <span class="host">Hosted with love by Samapika &amp; Sashwat</span>
+    Watch this space — a whole new someone is about to sprout up.
+  </footer>
+</div>
+
+</body>
+</html>
